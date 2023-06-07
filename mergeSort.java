@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class mergeSort {
+public class MergeSort {
 
     private static void merge(Comparable[] a, Comparable[] aux, int low, int mid, int high) {
         assert isSorted(a, low, mid);
