@@ -1,0 +1,5 @@
+# ignore build output
+out/
+
+# ignore workspace specific config
+.idea/workspace.xml
