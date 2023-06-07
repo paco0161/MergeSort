@@ -27,6 +27,7 @@ public class mergeSort {
         int mid = (low + high) / 2;
         sort(a, aux, low, mid);
         sort(a, aux, mid + 1, high);
+        if (!less(a[mid + 1], a[mid])) return;
         merge(a, aux, low, mid, high);
     }
 
@@ -36,19 +37,18 @@ public class mergeSort {
     }
 
     public static void main(String[] args) {
-        Integer[] example = {9, 8, 1, 2, 6, 2, 6, 1, 9, 8, 31, 7, 21};
+        Integer[] example = {9, 8, 1, 2, 6, 2, 6, 1, 8, 31, 7, 21};
         sort(example);
         System.out.println(Arrays.toString(example));
     }
 
     private static boolean less(Comparable a, Comparable b) {
-        if (a.compareTo(b) < 0) return true;
-        else return false;
+        return a.compareTo(b) < 0;
     }
 
     private static boolean isSorted(Comparable[] a, int low, int high) {
-        for (int k = low; k < high; k++) {
-            if (a[k].compareTo(a[k + 1]) > 0) return false;
+        for (int k = low + 1; k <= high; k++) {
+            if (less(a[k], a[k - 1])) return false;
         }
         return true;
     }
