@@ -2,8 +2,4 @@
 out/
 
 # ignore workspace specific config
-<<<<<<< HEAD
 .idea/workspace.xml
-=======
-.idea/workspace.xml
->>>>>>> master-holder
