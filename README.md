@@ -1,2 +1,2 @@
-# MergeSort
-Practice for MergeSort Implementation
+# Basic Sorting Algorithm
+Practice for MergeSort & QuickSort Implementation
