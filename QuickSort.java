@@ -2,6 +2,9 @@ import edu.princeton.cs.algs4.StdRandom;
 
 public class QuickSort {
 
+    // in-place, n log n probabilistic guarantee (faster in practice)
+    // Issue: quadratic when partition stops equal keys
+
     private static int partition(Comparable[] a, int low, int high) {
         int i = low, j = high + 1;
 
@@ -50,7 +53,7 @@ public class QuickSort {
         sort(example);
 
         for (String c : example) {
-            System.out.println(c);
+            System.out.print(c + " ");
         }
     }
 }

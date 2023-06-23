@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 public class MergeSort {
 
+    // stable, not in-place (need auxiliary array), guarantee n log n
+
     private static void merge(Comparable[] a, Comparable[] aux, int low, int mid, int high) {
         assert isSorted(a, low, mid);
         assert isSorted(a, mid + 1, high);
